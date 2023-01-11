@@ -1,0 +1,142 @@
+@import 'src/styles/variables.scss';
+
+.slider {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 200px 108px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+
+  .active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .next {
+    transform: translateX(100%);
+  }
+
+  .last {
+    transform: translateX(-100%);
+  }
+
+  &__container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: $colorMain;
+    backdrop-filter: blur(25px);
+    transition: $transition5;
+  }
+
+  &__dots {
+    display: flex;
+    gap: 18px;
+    cursor: pointer;
+
+    &_item {
+      width: 44px;
+      height: 8px;
+      background-image: url(../../images/dot_black.svg);
+    }
+
+    &_active {
+      background-image: url(../../images/dot_orange.svg);
+    }
+  }
+
+  &__button_left, &__button_right {
+    position: absolute;
+    top: 45%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    transition: $transition5;
+    z-index: 2;
+  }
+
+  &__button_left {
+    left: 0;
+    background-image: url(../../images/chevron-left.svg);
+    
+    &:hover {
+      background-image: url(../../images/left-orange.svg);
+    }
+  }
+
+  &__button_right {
+    right: 0;
+    background-image: url(../../images/chevron-right.svg);
+
+    &:hover {
+      background-image: url(../../images/chevron-left-orange.svg);
+    }
+  }
+
+  &__left {
+    position: relative;
+  }
+
+  &__description {
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+    width: 265px;
+    padding: 10px 22px;
+    background: rgba(40, 48, 54, 0.2);
+    backdrop-filter: blur(25px);
+    border-radius: 8px;
+
+    h4 {
+      font-weight: $fontWeight500Main;
+      font-size: $fontSizeSXL;
+      line-height: $lineHeightSXL;
+      letter-spacing: 0.015em;
+      color: $colorWhite;
+      opacity: $opacityL;
+    }
+
+    p {
+      font-weight: $fontWeight400;
+      font-size: $fontSizeS;
+      line-height: $lineHeightS;
+      color: $colorWhite;
+      opacity: $opacityS;
+    }
+  }
+
+  &__right {
+    background-image: url(../../images/quote.svg);
+    background-repeat: no-repeat;
+    padding: 50px;
+    align-self: center;
+
+    p {
+      width: 393px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: $fontWeight400;
+      font-size: $fontSizeXS;
+      line-height: $lineHeightM;
+      color: $colorWhite;
+      opacity: $opacityL;
+      letter-spacing: 0.015em;
+    }
+  }
+}

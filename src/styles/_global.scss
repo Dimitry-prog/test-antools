@@ -1,0 +1,22 @@
+@import "variables";
+
+#root {
+  font-family: $fontFamilyMain;
+  font-style: $fontStyleNormalMain;
+  font-size: $fontSizeMain;
+  font-weight: $fontWeight500Main;
+  background-color: $colorMain;
+}
+
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.next {
+  transform: translateX(100%);
+}
+
+.last {
+  transform: translateX(-100%);
+}

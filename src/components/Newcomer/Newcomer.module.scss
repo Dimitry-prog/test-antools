@@ -1,0 +1,59 @@
+@import 'src/styles/variables.scss';
+
+.newcomer {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 200px 108px 0;
+  display: flex;
+  gap: 197px;
+
+  &__left {
+    max-width: 427px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      margin-bottom: 30px;
+      font-weight: $fontWeight500Main;
+      font-size: $fontSizeXL;
+      line-height: $lineHeightXL;
+      color: $colorWhite;
+      opacity: $opacityXl;
+    }
+
+    p {
+      margin-bottom: 60px;
+      font-size: $fontSizeM;
+      line-height: $lineHeightM;
+      color: $colorWhite;
+      opacity: $opacityS;
+    }
+
+    button {
+      max-width: 198px;
+      padding: 16px 40px;
+      font-size: $fontSizeM;
+      line-height: $lineHeightM;
+      border-radius: $borderRadiusS;
+      background-color: $colorAccent;
+      color: $colorWhite;
+      transition: $transition5;
+
+      &:hover {
+        background-color: $colorMain;
+        color: $colorAccent;
+      }
+    }
+  }
+
+  &__right {
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px 21px;
+    }
+
+  }
+}

@@ -1,0 +1,67 @@
+@import 'src/styles/variables.scss';
+
+.nav {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 26px 105px 26px 111px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $colorWhite;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    p {
+      font-weight: $fontWeight600;
+      font-size: $fontSizeL;
+      line-height: $lineHeightL;
+      color: $colorWhite;
+      opacity: $opacityXl;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 40px;
+
+    a {
+      opacity: $opacityS;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: $fontSizeS;
+      line-height: $lineHeightS;
+    }
+  }
+
+  &__register {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-weight: $fontWeight600;
+    font-size: $fontSizeS;
+    line-height: $lineHeightS;
+
+    &_signin {
+      opacity: $opacityL;
+    }
+
+    &_signup {
+      padding: 12px 28px;
+      background-color: $colorAccent;
+      border-radius: $borderRadiusS;
+      color: $colorPrimary-1;
+      transition: $transition5;
+
+      &:hover {
+        background-color: $colorMain;
+        color: $colorAccent;
+      }
+    }
+  }
+
+
+}

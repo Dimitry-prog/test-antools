@@ -1,0 +1,54 @@
+@import 'src/styles/variables.scss';
+
+.popular {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 200px 108px 0;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    max-width: 500px;
+    margin: 0 auto 25px;
+    text-align: center;
+    font-weight: $fontWeight500Main;
+    font-size: $fontSizeXL;
+    line-height: $lineHeightXL;
+    color: $colorWhite;
+    opacity: $opacityXl;
+  }
+
+  &__text {
+    max-width: 440px;
+    margin: 0 auto 90px;
+    text-align: center;
+    font-weight: $fontWeight400;
+    font-size: $fontSizeM;
+    line-height: $lineHeightM;
+    color: $colorWhite;
+    opacity: $opacityS;
+  }
+
+  ul {
+    display: flex;
+    gap: 100px 22px;
+    flex-wrap: wrap;
+  }
+
+  &__more {
+    margin: 100px auto 0;
+    padding: 17px 38px;
+    font-size: 20px;
+    line-height: 30px;
+    color: $colorAccent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: $borderRadiusS;
+    transition: $transition5;
+
+    &:hover {
+      background-color: $colorAccent;
+      color: $colorWhite;
+    }
+  }
+}
+

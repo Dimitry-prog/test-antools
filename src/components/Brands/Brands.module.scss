@@ -1,0 +1,44 @@
+@import 'src/styles/variables.scss';
+
+.brands {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 200px 108px 0;
+
+  &__sun {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    background-image: url(../../images/sun_brand.svg);
+    background-repeat: no-repeat;
+  }
+
+  &__container {
+    padding: 55px 83px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    border-radius: $borderRadiusL;
+    background: rgba(40, 48, 54, 0.2);
+    border: 2px solid rgba(40, 48, 54, 0.6);
+    position: relative;
+    overflow: hidden;
+
+    h3 {
+      text-align: center;
+      font-weight: $fontWeight500Main;
+      font-size: $fontSizeSXL;
+      line-height: $lineHeightSXL;
+      color: $colorWhite;
+      opacity: $opacityL;
+    }
+
+    ul {
+      display: flex;
+      gap: 107px;
+    }
+  }
+
+}

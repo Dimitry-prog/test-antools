@@ -1,0 +1,66 @@
+@import 'src/styles/variables.scss';
+
+.join {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 250px 443px 0;
+
+  h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: $fontWeight500Main;
+    font-size: $fontSizeXL;
+    line-height: $lineHeightXL;
+    color: $colorWhite;
+    opacity: $opacityXl;
+  }
+
+  p {
+    max-width: 427px;
+    margin: 0 auto 100px;
+    text-align: center;
+    font-size: $fontSizeM;
+    line-height: $lineHeightM;
+    color: $colorWhite;
+    opacity: $opacityS;
+  }
+
+  form {
+    max-width: 549px;
+    padding: 8px 11px 8px 18px;
+    margin-bottom: 240px;
+    display: flex;
+    align-items: center;
+    border-radius: $borderRadiusM;
+    background: rgba(40, 48, 54, 0.6);
+    border: 2px solid rgba(40, 48, 54, 0.6);
+
+    input {
+      width: 100%;
+      margin: 0 13px;
+      color: $colorWhite;
+      opacity: $opacityXl;
+
+      &::placeholder {
+        opacity: $opacityS;
+      }
+    }
+
+    button {
+      min-width: 132px;
+      padding: 12px 36px;
+      font-weight: $fontWeight600;
+      font-size: $fontSizeS;
+      line-height: $lineHeightS;
+      background-color: $colorAccent;
+      border-radius: $borderRadiusS;
+      color: $colorWhite;
+      transition: $transition5;
+
+      &:hover {
+        background-color: $colorMain;
+        color: $colorAccent;
+      }
+    }
+  }
+}
