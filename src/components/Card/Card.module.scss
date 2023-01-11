@@ -1,5 +1,4 @@
-@import 'src/styles/variables.scss';
-
+@import "src/styles/variables.scss";
 .card {
   min-width: 392px;
   padding: 33px;
@@ -10,61 +9,50 @@
   transition: $transition5;
   overflow: hidden;
   position: relative;
-
   &_small {
     min-width: 288px;
     padding: 28px 21px;
   }
-
   &__sun {
     width: 150px;
     height: 150px;
     position: absolute;
-    top: -50px;
-    right: -60px;
+    top: -10px;
+    right: -30px;
     background-image: url(../../images/sun.svg);
     background-repeat: no-repeat;
     opacity: 0;
     transition: $transition5;
   }
-  
   &:hover {
     transform: translateY(-20px) translateX(2px);
     backdrop-filter: blur(25px);
     background: rgba(40, 48, 54, 0.6);
     border: 2px solid rgba(40, 48, 54, 0.6);
-
     & .card__sun {
-      opacity: 1;
+      opacity: $opacityS;
     }
-
     & h3 {
       opacity: $opacityXl;
     }
-
     & span {
       opacity: $opacityXXl;
     }
-
     & .card__description {
       opacity: $opacityL;
     }
-
     & .card__footer_like {
       background-image: url(../../images/flat-color-icons_like_red.svg);
       opacity: $opacityXXl;
     }
-
     & .card__footer_add {
       opacity: $opacityS;
     }
-
     & .card__footer_visit {
       background-color: $colorAccent;
       opacity: $opacityXXl;
     }
   }
-
   &__description {
     margin: 0;
     width: 326px;
@@ -74,22 +62,18 @@
     color: $colorWhite;
     opacity: $opacityS;
     transition: $transition5;
-
     &_small {
       width: 245px;
       font-size: $fontSizeXS;
     }
   }
-
   &__top {
     display: flex;
     gap: 30px;
   }
-
   &__tariff {
     display: flex;
     flex-direction: column;
-
     h3 {
       font-weight: $fontWeight500Main;
       font-size: $fontSizeSXL;
@@ -98,7 +82,6 @@
       opacity: $opacityL;
       transition: $transition5;
     }
-
     span {
       font-size: $fontSizeM;
       line-height: $lineHeightM;
@@ -107,32 +90,27 @@
       transition: $transition5;
     }
   }
-
   &__footer {
     display: flex;
     justify-content: space-between;
-
     &_icons {
       display: flex;
       align-items: center;
       gap: 20px;
       transition: $transition5;
     }
-
     &_like {
       width: 30px;
       height: 30px;
       background-image: url(../../images/flat-color-icons_like.svg);
       opacity: $opacityXS;
     }
-
     &_add {
       width: 30px;
       height: 30px;
       background-image: url(../../images/eva_folder-add-outline.svg);
       opacity: $opacityXS;
     }
-
     &_visit {
       padding: 9px 35px;
       font-weight: $fontWeight600;
